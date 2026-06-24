@@ -87,7 +87,7 @@
 ```txt
 
 ├── streamlitCNN.py # کد اجرای وب اپلیکیشن Streamlit
-├── opt1Channelmodel.keras # مدل آموزش‌دیده (Saved Model)
+├── opt1Channelmodel.h5 # مدل آموزش‌دیده (Saved Model)
 ├── brain-tumor.ipynb # نوتبوک آموزش و تحلیل مدل
 ├── 1.jpg # اسکرین‌شات محیط Streamlit
 ├── 2.jpg # نمونه خروجی مدل
@@ -125,7 +125,7 @@ python -m streamlit run streamlitCNN.py --server.port 8080
 ```
 
 📌 نکات مهم
-مدل از قبل آموزش داده شده و در فایل.keras ذخیره شده است.
+مدل از قبل آموزش داده شده و در فایل.h5ذخیره شده است.
 در زمان اجرا نیازی به آموزش مجدد مدل نیست.
 فقط کافی است Streamlit اجرا شود و فایل مدل در کنار فایل پایتونی در کنار فایل کدل قرار داشته باشد و بعد اجرای streamlit، فایل تصویر آپلود گردد.
 
