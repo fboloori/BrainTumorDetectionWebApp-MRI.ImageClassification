@@ -143,7 +143,7 @@ python -m streamlit run streamlitCNN.py --server.port 8080
 
 ## 📌 Important Notes
 
-* The trained model is already provided in the `.keras` file.
+* The trained model is already provided in the `.h5` file.
 * Retraining the model is not required to run the application.
 * Ensure that the model file is located in the same directory as the Python script.
 * After launching the Streamlit application, simply upload an MRI image to obtain a prediction.
