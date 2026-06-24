@@ -81,9 +81,8 @@ Advantages of this approach:
 
 The model achieved an accuracy very close to 100% on the test dataset.
 
-The final model was evaluated using test images that were not included in either the training or validation datasets. The results demonstrated excellent performance, and in our test examples, all MRI images were classified correctly.
-
-**<<EDIT IF NEEDED: Replace with exact evaluation metrics such as Accuracy, Recall, Precision, F1-score, etc.>>**
+The final model's accuracy was over 99.5 percent. It also was evaluated using test images that were not included in either the training or validation datasets. The results demonstrated excellent performance, and in our test examples, all MRI images were classified correctly.
+ 
 
 ---
 
