@@ -1,0 +1,33 @@
+# Virtual Environments
+venv/
+env/
+ENV/
+brain_tumor_env/
+
+# Conda
+.conda/
+conda-meta/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Model files (اختیاری)
+*.h5
+*.keras
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

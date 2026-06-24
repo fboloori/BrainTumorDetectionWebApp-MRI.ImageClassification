@@ -1,0 +1,142 @@
+
+  
+## وب اپلیکیشن تشخیص تومور مغزی براساس تصاویر MRI 🧠
+
+این پروژه یک سیستم یادگیری عمیق برای **طبقه‌بندی تصاویر MRI مغز** در چهار کلاس مختلف است که شامل یک مدل CNN مبتنی بر Transfer Learning (ResNet) و یک رابط کاربری تحت وب با Streamlit می‌باشد.
+
+
+<img width="1920" height="1080" alt="1" src="https://github.com/user-attachments/assets/1d966ee0-1890-48e8-802a-c05475bf6c9f" />
+
+
+## 📊 خروجی نمونه
+
+در این پروژه، خروجی مدل شامل موارد زیر است:
+
+- کلاس پیش‌بینی‌شده
+- احتمال (Confidence) برای هر کلاس
+- نمودار میله‌ای از نتایج
+<img width="1920" height="1080" alt="2" src="https://github.com/user-attachments/assets/949bb3c3-40ba-4c97-9826-a7e3c47cf3bf" />
+
+
+
+ 
+## 📌 کلاس‌های قابل پیش‌بینی
+
+مدل تصاویر MRI را در چهار دسته زیر طبقه‌بندی می‌کند:
+
+- Glioma Tumor
+- Meningioma Tumor
+- Pituitary Tumor
+- Normal
+
+---
+
+## 🧠 توضیح کلی از مدل آموزش داده شده (فایل ipynb)
+
+در این پروژه از یک دیتاست شامل تصاویر MRI مغز استفاده شده است که شامل چهار کلاس بالا می‌باشد.
+
+### مراحل اصلی کار:
+
+### 1. اعمال فیلتر روی تصاویر و Data Augmentation
+برای افزایش تنوع داده‌های آموزشی از اعمال فیلترهای Blur, sobel , Clahe روی تصاویر استفاده و در نهایت مشخص شد که استفاده از تصاویر اصلی به همراه تصاویر Blur و CLAHE عملکرد بهتری را ایجاد می‌کند، در حالی که Sobel این طورنبود.
+ 
+
+### 2. معماری مدل (Transfer Learning)
+
+برای ساخت مدل از **شبکه از پیش آموزش‌دیده ResNet** به عنوان مدل پایه استفاده شده است.
+
+- لایه‌های ابتدایی: Frozen (عدم آموزش)
+- لایه‌های انتهایی:
+  - Dense Layer
+  - Classification Layer (Softmax با 4 نورون)
+
+مزیت این روش:
+- استخراج بهتر ویژگی‌ها (Feature Extraction)
+- کاهش زمان آموزش
+- افزایش دقت مدل
+ 
+
+### 3. آموزش مدل
+
+- استفاده از **Early Stopping**
+- معیار توقف: کمترین `validation loss`
+- معیار ذخیره بهترین مدل: بیشترین `validation recall`
+- حداکثر epoch: 300
+ 
+
+### 4. ارزیابی مدل
+
+دقت مدل بالای 99 درصد بدست آمده و مدل نهایی روی داده‌های تستی که در فرآیند آموزش و validation استفاده نشده بودند، ارزیابی شد و نتایج نشان‌دهنده عملکرد عالی (در مثال تصاویر تستی ما بدون خطا) مدل در تطبیق پیش‌بینی با برچسب واقعی بود.
+
+---
+
+## 🌐 وب اپلیکیشن (Streamlit)
+
+برای نمایش مدل و استفاده تعاملی، یک وب اپلیکیشن با Streamlit توسعه داده شده است.
+
+### قابلیت‌ها:
+
+- آپلود تصویر MRI
+- پیش‌پردازش تصویر (Resize + Normalization)
+- نمایش کلاس پیش‌بینی‌شده
+- نمایش نمودار Confidence برای هر کلاس
+
+---
+
+## 📁 ساختار ریپازیتوری
+```txt
+
+├── streamlitCNN.py # کد اجرای وب اپلیکیشن Streamlit
+├── opt1Channelmodel.keras # مدل آموزش‌دیده (Saved Model)
+├── brain-tumor.ipynb # نوتبوک آموزش و تحلیل مدل
+├── 1.jpg # اسکرین‌شات محیط Streamlit
+├── 2.jpg # نمونه خروجی مدل
+└── README.md
+```
+
+
+---
+ 
+## 🚀 نحوه اجرای پروژه
+
+
+1. کلون کردن ریپو و رفتن به پوشه ی مربوطه
+```bash
+git clone https://github.com/fboloori/BrainTumorDetectionWebApp-MRI.ImageClassification.git
+cd BrainTumorDetectionWebApp-MRI.ImageClassification
+```
+
+سپس مطمئن شوید کتابخانه‌های لازم نصب شده‌اند:
+
+```bash
+python -m venv brain_tumor_env
+brain_tumor_env\Scripts\activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+2. اجرای Streamlit App
+```bash
+streamlit run streamlitCNN.py
+```
+یا در صورت نیاز به تعیین پورت:
+```bash
+python -m streamlit run streamlitCNN.py --server.port 8080
+```
+
+📌 نکات مهم
+مدل از قبل آموزش داده شده و در فایل.keras ذخیره شده است.
+در زمان اجرا نیازی به آموزش مجدد مدل نیست.
+فقط کافی است Streamlit اجرا شود و فایل مدل در کنار فایل پایتونی در کنار فایل کدل قرار داشته باشد و بعد اجرای streamlit، فایل تصویر آپلود گردد.
+
+
+
+
+##✨ تکنولوژی‌های استفاده شده
+- Python
+- TensorFlow / Keras
+- ResNet (Transfer Learning)
+- Streamlit
+- NumPy
+- Matplotlib
+- PIL
