@@ -101,7 +101,7 @@ A Streamlit-based web application was developed to provide an interactive interf
 
 ```txt
 ├── streamlitCNN.py          # Streamlit web application
-├── opt1Channelmodel.keras   # Trained model
+├── opt1Channelmodel.h5   # Trained model
 ├── brain-tumor.ipynb        # Training and analysis notebook
 ├── 1.jpg                    # Streamlit UI screenshot
 ├── 2.jpg                    # Sample prediction output
