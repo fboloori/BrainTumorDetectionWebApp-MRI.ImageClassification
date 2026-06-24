@@ -121,7 +121,7 @@ git clone https://github.com/fboloori/BrainTumorDetectionWebApp-MRI.ImageClassif
 cd BrainTumorDetectionWebApp-MRI.ImageClassification
 ```
 
-### 2. Download the h5 file of the trained 
+### 2. Download the h5 file of the trained model
 
 The trained model is available on Kaggle website where I trained the model. Download the h5 model from the following link:
 
