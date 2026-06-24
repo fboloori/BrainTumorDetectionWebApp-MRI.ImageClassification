@@ -105,8 +105,20 @@
 git clone https://github.com/fboloori/BrainTumorDetectionWebApp-MRI.ImageClassification.git
 cd BrainTumorDetectionWebApp-MRI.ImageClassification
 ```
+2. دانلود کردن فایل مدل آموزش داده شده:
+ 
+مدل را از لینک زیر دانلود کنید و در فولدر کلون شده از مرحله قبل ذخیره کنید:
 
-سپس مطمئن شوید کتابخانه‌های لازم نصب شده‌اند:
+https://www.kaggle.com/code/fatemehboloori/brain-tumor/output?select=opt1Channelmodel.h5  
+محل دانلود در تصویر زیر نشان داده شده است.
+
+<img width="400" height="250" alt="h5model" src="https://github.com/user-attachments/assets/9cba6f01-5d1a-44bd-96e9-0e7b0c737502" />
+
+اطمینان حاصل کنید که فایل مدل، دقیقا با نام پیش فرض آن ذخیره شود:"opt1Channelmodel.h5".
+3
+
+
+3. اجرای اپلیکیشن streamlit تحت وب:
 
 ```bash
 python -m venv brain_tumor_env
