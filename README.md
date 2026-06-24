@@ -128,8 +128,8 @@ The trained model is available on Kaggle website where I trained the model. Down
 https://www.kaggle.com/code/fatemehboloori/brain-tumor/output?select=opt1Channelmodel.h5  
 
 The download link is available in the page as mentioned in the following image:
-<img width="400" height="250" alt="h5model" src="https://github.com/user-attachments/assets/2ea616bd-415e-4c0b-a88d-e3d99e5e071f" />
 
+<img width="400" height="250" alt="h5model" src="https://github.com/user-attachments/assets/9cba6f01-5d1a-44bd-96e9-0e7b0c737502" />
 
 Save the downloaded file in the project folder you cloned in previous step. Ensure that the file name is exactly the default name "opt1Channelmodel.h5".
 
