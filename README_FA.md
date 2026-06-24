@@ -4,8 +4,8 @@
 
 این پروژه یک سیستم یادگیری عمیق برای **طبقه‌بندی تصاویر MRI مغز** در چهار کلاس مختلف است که شامل یک مدل CNN مبتنی بر Transfer Learning (ResNet) و یک رابط کاربری تحت وب با Streamlit می‌باشد.
 
-
-<img width="1920" height="1080" alt="1" src="https://github.com/user-attachments/assets/1d966ee0-1890-48e8-802a-c05475bf6c9f" />
+ 
+<img width="1920" height="1080" alt="1" src="https://github.com/user-attachments/assets/759847e6-a7a9-4409-bf92-b043a13bc669" />
 
 
 ## 📊 خروجی نمونه
@@ -15,7 +15,8 @@
 - کلاس پیش‌بینی‌شده
 - احتمال (Confidence) برای هر کلاس
 - نمودار میله‌ای از نتایج
-<img width="1920" height="1080" alt="2" src="https://github.com/user-attachments/assets/949bb3c3-40ba-4c97-9826-a7e3c47cf3bf" />
+
+<img width="1920" height="1080" alt="2" src="https://github.com/user-attachments/assets/c7292971-912c-4436-8f2a-8d99d3b478ee" />
 
 
 
