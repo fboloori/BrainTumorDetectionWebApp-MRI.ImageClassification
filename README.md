@@ -7,7 +7,9 @@
 
 This project is a deep learning system for **brain MRI image classification** into four different categories. It consists of a CNN model based on **Transfer Learning (ResNet)** and a web-based user interface implemented using Streamlit.
 
-<img width="1920" height="1080" alt="1" src="https://github.com/user-attachments/assets/1d966ee0-1890-48e8-802a-c05475bf6c9f" />
+<img width="1920" height="1080" alt="1" src="https://github.com/user-attachments/assets/f7757cdb-1210-44a9-a139-83ef71cad41a" />
+<img width="1920" height="1080" alt="2" src="https://github.com/user-attachments/assets/f4a9c12a-c0b7-467e-b194-afac5d36077c" />
+
 
 ## 📊 Sample Output
 
@@ -119,7 +121,19 @@ git clone https://github.com/fboloori/BrainTumorDetectionWebApp-MRI.ImageClassif
 cd BrainTumorDetectionWebApp-MRI.ImageClassification
 ```
 
-### 2. Run the Streamlit Application
+### 2. Download the h5 file of the trained 
+
+The trained model is available on Kaggle website where I trained the model. Download the h5 model from the following link:
+
+https://www.kaggle.com/code/fatemehboloori/brain-tumor/output?select=opt1Channelmodel.h5 (https://www.kaggle.com/code/fatemehboloori/brain-tumor/output?select=opt1Channelmodel.h5)
+
+The download link is available in the page as mentioned in the following image:
+<img width="800" height="700" alt="h5model" src="https://github.com/user-attachments/assets/2ea616bd-415e-4c0b-a88d-e3d99e5e071f" />
+
+
+Save the downloaded file in the project folder you cloned in previous step. Ensure that the file name is exactly the default name "opt1Channelmodel.h5".
+
+### 3. Run the Streamlit Application
 
 ```bash
 python -m venv brain_tumor_env
