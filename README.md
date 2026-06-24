@@ -78,10 +78,8 @@ Advantages of this approach:
 ---
 
 ### 4. Model Evaluation
-
-The model achieved an accuracy very close to 100% on the test dataset.
-
-The final model's accuracy was over 99.5 percent. It also was evaluated using test images that were not included in either the training or validation datasets. The results demonstrated excellent performance, and in our test examples, all MRI images were classified correctly.
+ 
+The final model's accuracy in terms of the recall metric (a crucial metric for healthcare models) was over 99.5 percent. It was also evaluated using test images that were not included in either the training or validation datasets. The results demonstrated excellent performance, and in our test examples, all MRI images were classified correctly.
  
 
 ---
